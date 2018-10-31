@@ -10,7 +10,7 @@ namespace SavingsAccount.Library.Test
         public void CalculateRate_When999_Returns9_99()
         {
             // Arrange
-            int input = 999;
+            string input = "999";
             // Act
             decimal output = SavingsAccount.CalculateRate(input);
 
@@ -22,7 +22,7 @@ namespace SavingsAccount.Library.Test
         public void CalculateRate_When1001_Returns15_02()
         {
             // Arrange
-            int input = 1001;
+            string input = "1001";
             // Act
             decimal output = SavingsAccount.CalculateRate(input);
 
@@ -34,7 +34,7 @@ namespace SavingsAccount.Library.Test
         public void CalculateRate_When5001_Returns100_02()
         {
             // Arrange
-            int input = 5001;
+            string input = "5001";
             // Act
             decimal output = SavingsAccount.CalculateRate(input);
 
@@ -46,7 +46,7 @@ namespace SavingsAccount.Library.Test
         public void CalculateRate_When10001_Returns250_03()
         {
             // Arrange
-            int input = 10001;
+            string input = "10001";
             // Act
             decimal output = SavingsAccount.CalculateRate(input);
 
@@ -59,7 +59,7 @@ namespace SavingsAccount.Library.Test
         public void CalculateRate_When50001_Returns1500_03()
         {
             // Arrange
-            int input = 50001;
+            string input = "50001";
             // Act
             decimal output = SavingsAccount.CalculateRate(input);
 
@@ -68,20 +68,20 @@ namespace SavingsAccount.Library.Test
         }
 
         [TestMethod]
-        public void ATest()
+        public void MultiTest()
         {
-            this.Perform_ATest(548, 5.48);
+            Perform_MultiTest("548", 5.48);
 
-            this.Perform_ATest(1558, 23.37);
+            Perform_MultiTest("1558", 23.37);
 
-            this.Perform_ATest(6248, 124.96);
+            Perform_MultiTest("6248", 124.96);
 
-            this.Perform_ATest(45125, 1128.12);
+            Perform_MultiTest("45125", 1128.12);
 
-            this.Perform_ATest(151548, 4546.44);
+            Perform_MultiTest("151548", 4546.44);
         }
 
-        private void Perform_ATest(int input, double expected)
+        private void Perform_MultiTest(string input, double expected)
         {
             Assert.IsTrue(SavingsAccount.CalculateRate(input).ToString() == expected.ToString());
 

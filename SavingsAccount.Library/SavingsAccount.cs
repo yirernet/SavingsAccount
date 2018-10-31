@@ -8,8 +8,9 @@ namespace SavingsAccount.Library
 {
     public class SavingsAccount
     {
-        public static decimal CalculateRate(int input)
+        public static decimal CalculateRate(string inputString)
         {
+            int.TryParse(inputString, out int input);
             double inputDbl = 0;
             decimal interestRate = 0;
 

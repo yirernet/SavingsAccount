@@ -14,7 +14,7 @@ namespace SavingsAccount
             Console.WriteLine("Please, enter your saving account balance to calculate your interest rate:");
             string inputBalance = Console.ReadLine();
 
-            string outputInterestRate = SavingsAccount.Library.SavingsAccount.CalculateRate(inputBalance);
+            string outputInterestRate = Library.SavingsAccount.CalculateRate(inputBalance).ToString();
             
 
             Console.WriteLine("Your interest Rate is: " + outputInterestRate);
